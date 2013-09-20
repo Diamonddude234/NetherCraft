@@ -1,0 +1,18 @@
+[
+{
+"modid": "MSNC",
+"name": "NetherCraft",
+"description": "A Minecraft Mod",
+"version": "dev_0",
+"url": "monkeystudios.net",
+"authorList": [
+"ryalein"
+],
+"credits": "",
+"logoFile": "",
+"screenshots": [],
+"dependencies": ["forge-9.10.1.871"
+],
+"mcversion": "1.6.2"
+}
+]
