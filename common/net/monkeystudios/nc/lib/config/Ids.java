@@ -18,5 +18,8 @@ public class Ids {
 	//Default values for Block IDs
 	public static int NETHERPOWERCORE_ACTUAL;
 	public static final int NETHERPOWERCORE_DEFAULT = 600;
+	
+	public static int SOULGLASS_ACTUAL;
+	public static final int SOULGLASS_DEFAULT = 601;
 
 }

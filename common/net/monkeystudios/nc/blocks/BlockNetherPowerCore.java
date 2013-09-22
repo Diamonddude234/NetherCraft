@@ -25,7 +25,7 @@ public class BlockNetherPowerCore extends BlockContainer{
 
 	public BlockNetherPowerCore(int id) {
 		super(id, Material.iron);
-		this.setUnlocalizedName(Strings.NETHERPOWERCORE_UNLOCALIZED_NAME);
+		this.setUnlocalizedName(Strings.NETHERPOWERCORE_KEY);
 		this.setHardness(2F);
 		this.setStepSound(Block.soundMetalFootstep);
 	}

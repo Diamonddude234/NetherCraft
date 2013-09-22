@@ -50,6 +50,7 @@ public class NetherCraft {
 		LogHelper.log(Level.INFO, "Preparing blocks");
 		Blocks.init();
 		Blocks.addNames();
+		Blocks.registerTileEntities();
 		LogHelper.log(Level.INFO, "Blocks loaded");
 		
 		LogHelper.log(Level.INFO, "Preparing recipes");

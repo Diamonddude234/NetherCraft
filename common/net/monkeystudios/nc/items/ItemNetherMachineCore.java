@@ -21,7 +21,7 @@ public class ItemNetherMachineCore extends Item{
 	public ItemNetherMachineCore(int id){
 		super(id);
 		this.setCreativeTab(CreativeTabs.tabMisc);
-		this.setUnlocalizedName(Strings.NETHERMACHINECORE_UNLOCALIZED_NAME);
+		this.setUnlocalizedName(Strings.NETHERMACHINECORE_KEY);
 	}
 	
 	@Override

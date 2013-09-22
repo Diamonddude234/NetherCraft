@@ -21,11 +21,11 @@ public class ConfigHandler {
 		config.load();
 		
 		// Block IDs Configuration
-		Ids.NETHERPOWERCORE_ACTUAL = config.getBlock(Configuration.CATEGORY_BLOCK, Strings.NETHERMACHINECORE_UNLOCALIZED_NAME, Ids.NETHERPOWERCORE_DEFAULT).getInt();
-		
+		Ids.NETHERPOWERCORE_ACTUAL = config.getBlock(Configuration.CATEGORY_BLOCK, Strings.NETHERMACHINECORE_KEY, Ids.NETHERPOWERCORE_DEFAULT).getInt();
+		Ids.SOULGLASS_ACTUAL = config.getBlock(Configuration.CATEGORY_BLOCK, Strings.SOULGLASS_KEY, Ids.SOULGLASS_DEFAULT).getInt();
 		
 		// Item IDs Configuration
-		Ids.NETHERMACHINECORE_ACTUAL = config.getItem(Configuration.CATEGORY_ITEM, Strings.NETHERMACHINECORE_UNLOCALIZED_NAME, Ids.NETHERMACHINECORE_DEFAULT).getInt() - 256;
+		Ids.NETHERMACHINECORE_ACTUAL = config.getItem(Configuration.CATEGORY_ITEM, Strings.NETHERMACHINECORE_KEY, Ids.NETHERMACHINECORE_DEFAULT).getInt() - 256;
 
 		config.save();
 	}
