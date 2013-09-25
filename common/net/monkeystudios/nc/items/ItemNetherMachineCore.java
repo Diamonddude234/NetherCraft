@@ -1,8 +1,8 @@
 package net.monkeystudios.nc.items;
 
 import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.monkeystudios.nc.NetherCraft;
 import net.monkeystudios.nc.lib.ModInfo;
 import net.monkeystudios.nc.lib.config.Strings;
 import cpw.mods.fml.relauncher.Side;
@@ -20,7 +20,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class ItemNetherMachineCore extends Item{
 	public ItemNetherMachineCore(int id){
 		super(id);
-		this.setCreativeTab(CreativeTabs.tabMisc);
+		this.setCreativeTab(NetherCraft.ncTab);
 		this.setUnlocalizedName(Strings.NETHERMACHINECORE_KEY);
 	}
 	

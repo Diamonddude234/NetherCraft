@@ -2,11 +2,13 @@ package net.monkeystudios.nc;
 
 import java.util.logging.Level;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.monkeystudios.nc.blocks.Blocks;
 import net.monkeystudios.nc.items.Items;
 import net.monkeystudios.nc.lib.LogHelper;
-import net.monkeystudios.nc.lib.Recipes;
 import net.monkeystudios.nc.lib.ModInfo;
+import net.monkeystudios.nc.lib.Recipes;
+import net.monkeystudios.nc.lib.TabNetherCraft;
 import net.monkeystudios.nc.lib.config.ConfigHandler;
 import net.monkeystudios.nc.proxies.CommonProxy;
 import cpw.mods.fml.common.Mod;
@@ -16,6 +18,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 
 /**
  * NetherCraft
@@ -30,6 +33,8 @@ import cpw.mods.fml.common.network.NetworkMod;
 @Mod(modid = ModInfo.MOD_ID, name=ModInfo.MOD_NAME, version=ModInfo.VERSION_NUMBER)
 @NetworkMod(channels={ModInfo.CHANNEL_NAME}, clientSideRequired=true, serverSideRequired=true)
 public class NetherCraft {
+	
+	public static CreativeTabs ncTab = new TabNetherCraft(CreativeTabs.getNextID(), ModInfo.MOD_NAME);
 
 	@EventHandler
 	public static void preInit( FMLPreInitializationEvent event ) {
@@ -56,6 +61,8 @@ public class NetherCraft {
 		LogHelper.log(Level.INFO, "Preparing recipes");
 		Recipes.init();
 		LogHelper.log(Level.INFO, "Recipes loaded");
+		
+		LanguageRegistry.instance().addStringLocalization("itemGroup." + ModInfo.MOD_NAME, "en_US", ModInfo.MOD_NAME);
 	}
 
 	@EventHandler

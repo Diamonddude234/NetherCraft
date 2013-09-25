@@ -21,5 +21,11 @@ public class Ids {
 	
 	public static int SOULGLASS_ACTUAL;
 	public static final int SOULGLASS_DEFAULT = 601;
+	
+	public static int NETHERTRANSFERNODE_ACTUAL;
+	public static final int NETHERTRANSFERNODE_DEFAULT = 602;
+	
+	public static int NETHERSTRUCTURECASING_ACTUAL;
+	public static final int NETHERSTRUCTURECASING_DEFAULT = 603;
 
 }
