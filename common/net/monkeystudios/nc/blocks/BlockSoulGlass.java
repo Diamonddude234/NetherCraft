@@ -20,7 +20,7 @@ import cpw.mods.fml.relauncher.SideOnly;
  * 
  * BlockSoulGlass
  * 
- * @author ryalein
+ * @author ryaleind
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  * 
  */
@@ -52,6 +52,17 @@ public class BlockSoulGlass extends BlockContainer {
     {
         return false;
     }
+	
+	@Override
+	public void breakBlock(World world, int x, int y, int z, int par5, int par6)
+	{
+	    TileEntitySoulGlass dummy = (TileEntitySoulGlass)world.getBlockTileEntity(x, y, z);
+	     
+	    if(dummy != null && dummy.getCore() != null)
+	        dummy.getCore().invalidateMultiblock();
+	     
+	    super.breakBlock(world, x, y, z, par5, par6);
+	}
 
 	/**
 	 * Returns true if the given side of this block type should be rendered, if

@@ -35,6 +35,17 @@ public class BlockNetherTransferNode extends BlockContainer{
 	}
 	
 	@Override
+	public void breakBlock(World world, int x, int y, int z, int par5, int par6)
+	{
+	    TileEntityNetherTransferNode dummy = (TileEntityNetherTransferNode)world.getBlockTileEntity(x, y, z);
+	     
+	    if(dummy != null && dummy.getCore() != null)
+	        dummy.getCore().invalidateMultiblock();
+	     
+	    super.breakBlock(world, x, y, z, par5, par6);
+	}
+	
+	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister icon){
 		blockIcon = icon.registerIcon(ModInfo.MOD_ID.toLowerCase() + ":" + this.getUnlocalizedName().substring(5)+"_inactive");

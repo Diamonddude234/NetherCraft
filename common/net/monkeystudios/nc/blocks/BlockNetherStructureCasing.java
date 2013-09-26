@@ -40,6 +40,17 @@ public class BlockNetherStructureCasing extends BlockContainer{
 	}
 	
 	@Override
+	public void breakBlock(World world, int x, int y, int z, int par5, int par6)
+	{
+	    TileEntityNetherStructureCasing dummy = (TileEntityNetherStructureCasing)world.getBlockTileEntity(x, y, z);
+	     
+	    if(dummy != null && dummy.getCore() != null)
+	        dummy.getCore().invalidateMultiblock();
+	     
+	    super.breakBlock(world, x, y, z, par5, par6);
+	}
+	
+	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister icon) {
 		for (int i = 0; i < 16; i++) {
